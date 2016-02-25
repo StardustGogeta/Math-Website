@@ -12,17 +12,13 @@
 		<script>
 		function FC4()
 		{
-			console.log("Function success!")
-			//var x = Number(FC4.forms.numbox.num.value);
 			var x = document.getElementById("num").value;
-			console.log(x)
 			var numlist = "";
 			for (i=1; i<=Math.sqrt(x); i++)
 			{
 				if (x % i == 0)
 				{
 					numlist=numlist.concat(String(i), "<br>", String(x/i), "<br>");
-					console.log(numlist)
 				}
 			}
 			document.getElementById("output").innerHTML=numlist;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		Hello! The base converter will go below.<br>
+		Please enter values into the boxes.<br>
+		<form name="numbox" onsubmit="BC();return false;">
+			<input type="text" name="num" id="num" placeholder="Number"><br>
+			<input type="text" name="b1" id="b1" placeholder="First Base"><br>
+			<input type="text" name="b2" id="b2" placeholder="Desired Base"><br>
+			<input type="submit" name="Submit"><br>
+		</form>
+		<p>Your number is:</p>
+		<p id="output"></p>
+		<script>
+		function BC()
+		{
+			var num = document.getElementById("num").value;
+			var b1 = document.getElementById("b1").value;
+			var b2 = document.getElementById("b2").value;
+			document.getElementById("output").innerHTML=parseInt(num, b1).toString(b2);
+		}
+		</script>
+		<br><br>
+		<a href="Home.html"><b>Home Page</b></a><br>
+		This work is covered under an MIT free-use license.
+	</body>
+</html>
