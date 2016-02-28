@@ -9,6 +9,7 @@ function FC4()
 					numlist=numlist.concat(String(i), "<br>", String(x/i), "<br>");
 				}
 			}
+			numlist=numlist.concat("<br>")
 			document.getElementById("output").innerHTML=numlist;
 		}
 

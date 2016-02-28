@@ -3,21 +3,23 @@
 	<title>Base Converter</title>
 	<head>
 		<link rel="stylesheet" type="text/css" href="..\CSS\MainStyle.css">
+		<p class="A"><b>StardustGogeta's Base Converter</b></p>
 	</head>
 	<body>
-		Hello! The base converter will go below.<br>
+		The base converter transforms one number from one base to another.<br>
+		Valid bases range from 2 to 36.<br>
 		Please enter values into the boxes.<br>
 		<form name="numbox" onsubmit="BC();return false;" autocomplete="off">
-			<input type="number" name="num" id="num" placeholder="Number"><br>
+			<input type="text" name="num" id="num" placeholder="Number"><br>
 			<input type="number" name="b1" id="b1" placeholder="First Base"><br>
 			<input type="number" name="b2" id="b2" placeholder="Desired Base"><br>
 			<input type="submit" name="Submit"><br>
 		</form>
 		<p>Your number is:</p>
 		<p id="output"></p>
-		<script src="..\JavaScript\Math.js"></script>
+		<script src="..\JavaScript\StarMath.js"></script>
 		<br><br>
 		<div class="Z"><a href="Home.html"><b>Home Page</b></a><br>
-		This work is covered under an MIT free-use license.</div>
+		This work is covered under an MIT free-use license. View the source code on <a href="https://github.com/StardustGogeta/Math-Website">GitHub</a>.</div>
 	</body>
 </html>

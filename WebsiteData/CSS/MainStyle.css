@@ -15,8 +15,15 @@ body
 
 div.Z
 {
+	text-align: center;
+	background-color: black;
 	position: fixed;
-	bottom: 80px;
+	bottom: 0px;
+	left: 0px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+	width: 100%;
 }
 
 input[type=number]
