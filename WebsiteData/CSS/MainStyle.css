@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 	
 a
 {
@@ -11,6 +11,7 @@ body
 	color: white;
 	font-size: 1em;
 	font-family: "Open Sans", "Georgia", Times, serif;
+	font-weight: 400;
 }
 
 div.Z
@@ -67,4 +68,21 @@ input[type=submit]
 p.A
 {
 	font-size: 1.25em;
+}
+
+.DL
+{
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	list-style-type: none;
+
+}
+
+.DLtitle
+{
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 1.1em;
 }

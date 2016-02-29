@@ -6,7 +6,7 @@ function FC4()
 			{
 				if (x % i == 0)
 				{
-					numlist=numlist.concat(String(i), "<br>", String(x/i), "<br>");
+					numlist=numlist.concat(String(i), "<br>", String(x/i), "<br>-------------------<br>");
 				}
 			}
 			numlist=numlist.concat("<br>")
