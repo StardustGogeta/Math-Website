@@ -33,7 +33,7 @@ function FC5()
 				{
     					for (d=2; d<=Math.ceil(n.toFixed(Math.log10(n)).sqrt()); d++)
     					{
-       						if (n % d == 0):
+       						if (n % d == 0)
        						{
             						return(d);
        						}
