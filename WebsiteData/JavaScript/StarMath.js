@@ -13,6 +13,31 @@ function FC4()
 			document.getElementById("output").innerHTML=numlist;
 		}
 
+function FC5()
+		{
+			var x = document.getElementById("num").value;
+			x = x.toFixed(Math.floor(Math.log10(x)));
+			var numlist = [1];
+			while (x-1)
+			{
+				f = findFactor(x);
+				x /= f;
+				numlist+=numlist.map(numlist*3);
+				numlist=Array.from(Set(numlist));
+			}
+			numlist.sort(function(a, b){return a-b});
+			numlist=numlist.join("<br>").concat("<br>")
+			document.getElementById("output").innerHTML=numlist;
+
+			function findFactor(n)
+				{
+    					for (d=2; d<=Math.ceil(n.toFixed(Math.log10(n)).sqrt()); d++):
+       					if (n % d == 0):
+            					return(d)
+    					return(n)
+				}
+		}
+
 function BC()
 		{
 			var num = document.getElementById("num").value;
