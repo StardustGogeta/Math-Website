@@ -15,33 +15,37 @@ function FC4()
 
 function FC5()
 		{
-			var x = document.getElementById("num").value;
-			x = x.toFixed(Math.floor(Math.log10(x)));
-			var numlist = [1];
+			var x = new Decimal(0).toPrecision(1000);
+			x = document.getElementById("num").value;
+			var prec = x.toString().length;
+			Decimal.config({ precision: prec });
+			var numlist = new Set([1]);
 			while (x-1)
 			{
+				var numlist2 = new Set([]);
 				f = findFactor(x);
-				x /= f;
-				numlist+=numlist.map(numlist*3);
-				numlist=Array.from(Set(numlist));
+				x = Decimal.div(x,f);
+				numlist.forEach(function(y){numlist2.add(y*f)});
+				numlist2.forEach(function(y){numlist.add(y)});
 			}
+			numlist=Array.from(numlist)
 			numlist.sort(function(a, b){return a-b});
-			numlist=numlist.join("<br>").concat("<br>");
+			numlist=numlist.join("<br>").concat("<br><br>");
 			document.getElementById("output").innerHTML=numlist;
 
 			function findFactor(n)
 				{
-    					for (d=2; d<=Math.ceil(n.toFixed(Math.log10(n)).sqrt()); d++)
-    					{
-       						if (n % d == 0)
-       						{
-            						return(d);
-       						}
-    					}
-    					return(n);
+					for (d=2; d<=Math.sqrt(n); d++)
+    				{	
+       					if (Decimal.mod(n,d) == 0)
+       					{
+							return(d);
+       					}
+    				}
+    				return(n);
 				}
 		}
-
+		
 function BC()
 		{
 			var num = document.getElementById("num").value;
